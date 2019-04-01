@@ -1,0 +1,41 @@
+<!--pages/fistPage/ready/ready.wxml-->
+<view class='content'>
+  <view class='title'>调查前准备</view>
+  <view class='div'>
+    <view class='hr'>ITEM1: 基础资料收集</view>
+    <view class='p'>
+      <text>1、评价河道的地形图
+      2、地形、地貌、气象、水文、植被有关资料
+      3、历史灾害
+      4、前人研究成果
+      5、其它资料
+      </text>
+    </view>
+  </view>
+
+   <view class='div'>
+    <view class='hr'>ITEM2: 调查工具准备</view>
+    <view class='p'>
+      <text>1、皮尺
+      2、测绳
+      3、GPS
+      4、钢卷尺
+      5、温度计
+      6、YSI 水质检测仪
+      7、13#浮游生物网
+      8、25#浮游生物网
+      9、5L 采水器
+      10、透明度盘
+      11、彼得逊采泥器
+      </text>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM3: 辅助统计软件</view>
+    <view class='p'>
+      <text>SPSS、EXCEL、MATLAB 等数据统计软件。  </text>
+    </view>
+  </view>
+
+</view>

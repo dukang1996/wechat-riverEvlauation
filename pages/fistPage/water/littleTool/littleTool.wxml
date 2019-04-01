@@ -1,0 +1,33 @@
+<!--pages/fistPage/water/littleTool/littleTool.wxml-->
+<view class='content'>
+  <form bindsubmit='riverValue' bindreset='formRest'>
+    <view class='valueInput'>
+      <view style='margin-top:3px;margin-left:5px'>请输入河道长度：</view>
+      <input style='border:1px solid #c0c0c0;position:absolute;right:50px;text-align:right' type='number' name='length'></input>
+      <view style='position:absolute;margin-top:6px;right:25px;font-size:10px;'>KM</view>
+    </view>
+
+    <view class='valueInput'>
+      <view style='margin-top:3px;margin-left:5px'>请输入河道宽度：</view>
+      <input style='border:1px solid #c0c0c0;;position:absolute;right:50px;text-align:right' type='number' name='width'></input>
+      <view style='margin-top:6px;position:absolute;right:25px;font-size:10px;'>M</view>
+    </view>
+
+    <view class='valueInput'>
+      <view style='margin-top:3px;margin-left:5px'>请输入河道深度：</view>
+      <input style='border:1px solid #c0c0c0;;position:absolute;right:50px;text-align:right' type='number' name='depth'></input>
+      <view style='margin-top:6px;position:absolute;right:25px;font-size:10px;'>M</view>
+    </view>
+
+    <view class='btnArea'>
+      <button form-type='submit' type='primary' style='font-size:12px;background-color:#e2d6be'>完成</button>
+      <button form-type='reset' style='font-size:12px;'>清空</button>
+    </view>
+  </form>
+</view>
+<view class='content'>
+  <view class='title'>采样点按下列方式设置:</view>
+  <view class='item'>{{len}}</view>
+  <view class='item'>{{wid}}</view>
+  <view class='item'>{{dep}}</view>
+</view>

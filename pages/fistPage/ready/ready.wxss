@@ -1,0 +1,31 @@
+/* pages/fistPage/ready/ready.wxss */
+.content{
+  background-color: #f6fbffce;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.title{
+  font-family:'Microsoft JhengHei';
+  font-size: 16px;
+  font-weight: bold;
+}
+.div{
+  background-color: #fffbef;
+  border: solid #fffbef;
+  border-radius: 15px;
+  font-family: 'Microsoft YaHei';
+  margin-top:10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.hr{
+  font-size: 13px;
+  font-weight: bold;
+}
+.p{
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+

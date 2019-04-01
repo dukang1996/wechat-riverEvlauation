@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/fistPage/fistPage",
+    "pages/newEvaluation/newEvaluation",
+    "pages/fistPage/C1/C1",
+    "pages/fistPage/ready/ready",
+    "pages/fistPage/water/water",
+    "pages/fistPage/eco/eco",
+    "pages/fistPage/water/littleTool/littleTool"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d53e37",
+    "navigationBarTitleText": "河道验收评价指标体系",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor":"#D53E37",
+    "backgroundColor":"#f6fbff",
+    "borderstyle":"white",
+    "list": [{
+      "pagePath": "pages/fistPage/fistPage",
+      "text": "首页",
+      "iconPath": "png/fistPage/fistPage-0.png",
+      "selectedIconPath": "png/fistPage/fistPage-1.png"
+    },{
+      "pagePath": "pages/newEvaluation/newEvaluation",
+      "text": "新的测评",
+      "iconPath": "png/newEvaluation/newEvaluation-0.png",
+      "selectedIconPath": "png/newEvaluation/newEvaluation-1.png"
+    }]
+  }
+}
+

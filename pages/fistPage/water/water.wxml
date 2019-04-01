@@ -1,0 +1,58 @@
+<!--pages/fistPage/water/water.wxml-->
+<view class='content'>
+  <view class='div'>
+    <view class='hr'>
+      <view>ITEM1: 布置采样点</view>
+       <navigator url='littleTool/littleTool' open-type='navigate'>
+        <view class='right'>辅助小工具>></view>
+       </navigator>
+    </view>
+    <view class='p'>
+      <text>具体站点布置图根据现场考察确定绘图。</text>
+      <text style='font-weight:bold'>\n监测站点设计原则：</text>
+      <text>\n根据河道的长度、宽度和水深设计监测站点。</text>
+      <text>\n1、长度≦1 km 的河道，在工程内设置 2 个站点，工程外设置 1 个站点（推荐设置于河道上游）；</text>
+      <text decode='ture'>\n2、1km&lt;长度≦3 km 的河道，设置上中下游 3 个采样站点，上下游监测站点布置离工程范围端点 100 m 左右；\n3、长度&gt;3 km 的河道，上下游各设置 1 个采样站点，站点布置离工程范围端点 100 m 左右，在中游设置 2-3 个站点。\n4、宽度≦50 m 的河道，设置河心 1 个采样站点；\n5、宽度&gt;50 m 的河道，设置河心一个采样站点，增加离岸 20 m 采样站点 1 个。\n6、水深≦2 m 的河道，取水下 0.5 m 处 1 个监测站点；\n7、水深&gt;2 m 的河道，采集水下 0.5 m 水层和离水底 0.5m 水层混合取样。</text>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM2: 调查方法</view>
+    <view class='p'>
+      <text>水质理化指标包括溶解氧、高锰酸盐指数、叶绿素a、氨氮、总磷、水体透明度，水质理化指标调查方法及调查时间如下表。</text>
+    </view>
+    <view class="table">
+        <view class="tr">
+            <view class="th1">调查指标</view>
+            <view class="th2">调查方法</view>
+        </view>
+        <view class="tr" >
+            <view class="td1">溶解氧</view>
+            <view class="td2">采用校准后的 YSI 现场测定</view>
+        </view>
+        <view class="tr" >
+            <view class="td1">高锰酸盐指数</view>
+            <view class="td2">水样带回实验室检测，检测方法，酸性法 GB/T 11892-1989</view>
+        </view>
+        <view class="tr" >
+            <view class="td1">叶绿素a</view>
+            <view class="td2">水样带回实验室检测，检测方法，荧光分光光度法</view>
+        </view>
+        <view class="tr" >
+            <view class="td1">氨氮</view>
+            <view class="td2">采用校准后的 YSI 现场测定</view>
+        </view>
+        <view class="tr" >
+            <view class="td1">总磷</view>
+            <view class="td2">水样带回实验室检测，检测方法，钼酸铵分光光度法 GB 11893-89</view>
+        </view>
+        <view class="tr" >
+            <view class="td1">水体透明度</view>
+            <view class="td2">现场测定，将塞氏盘平放入水中，逐渐下沉，到刚好看不到盘面的白色时，记录深度（m）</view>
+        </view>
+        <view style='font-size:10px'>备注：每年 4 次，分别为 2 月、5月、8 月、11月，每月 15-20日，避开雨天</view>
+    </view>
+    
+  </view>
+
+</view>

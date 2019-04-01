@@ -1,0 +1,40 @@
+/* pages/cinema/cinema.wxss */
+.basic{
+  padding: 5px;
+  border-radius: 0 0 15px 15px;
+  border-bottom: solid 1px #dde4da
+}
+.title{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 8px;
+}
+.basicInfo{
+  font-size:14px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding-left: 10px;
+  height: 60rpx
+}
+.info{
+  position: absolute;
+  margin-left: 40%;
+  width:55%;
+  font-size: 12px
+}
+.section__title{
+  text-align: center;
+  padding-top: 5rpx;
+  font-size: 13px;
+}
+.outInfo{
+  display:flex;flex-direction:row;width:100%;
+  font-size: 12px;
+}
+.outTitle{
+  margin-top: 5rpx;
+  margin-left: 10px;
+  width: 50%;
+}

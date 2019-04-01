@@ -1,0 +1,312 @@
+<!--pages/newEvaluation/newEvaluation.wxml-->
+<view class='content'>
+  <view class='basic' style='background-color:#f0f8ff'>
+    <view class='title'>河道基本信息</view>
+    <view class="basicInfo">
+      <view class="section__title">河道名称：</view>
+      <input type='text' placeholder='输入河道名称' class='info' bindinput='getRiverName'></input>
+    </view>
+
+    <view class="basicInfo">
+      <view class="section__title">河道长度：</view>
+      <input type='number' placeholder='输入河道长度' class='info' bindinput='getRiverLength'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m</view>
+    </view>
+
+    <view class="basicInfo">
+      <view class="section__title">河道面积：</view>
+      <input type='number' placeholder='输入河道面积' class='info' bindinput='getRiverS'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m2</view>
+    </view>
+
+    <view class="basicInfo">
+      <view class="section__title">河滨带面积：</view>
+      <input type='number' placeholder='输入河滨带面积' class='info' bindinput='getRiverL'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m2</view>
+    </view>
+
+    <view class="basicInfo">
+      <view class="section__title">选择河道类型：</view>
+      <picker mode='selector' bindchange='bindPickerChange' value="{{index}}" range="{{riverType}}" class='info' style='margin-top: 5rpx;'>
+      <view>{{riverType[typeId]}}</view>
+      </picker>
+    </view>
+  </view>
+  
+  <view class='title'>河道水质分项指标</view>
+  <view class='basic' style='background-color:#fffbef'>
+    <view class='basicInfo'>
+      <view class='section__title'>溶解氧含量</view>
+      <input class='info' type='number' placeholder='输入溶解氧含量' bindinput='judgeDO'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>mg/L</view>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{result.C1}}</view>
+      <view class='outTitle'>分项分值：{{score.C1}}</view>
+    </view>
+  </view>
+
+  <view class='basic' style='background-color:#fffbef'>
+    <view class='basicInfo'>
+      <view class='section__title'>高锰酸盐指数</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC2'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>mg/L</view>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{result.C2}}</view>
+      <view class='outTitle'>分项分值：{{score.C2}}</view>
+    </view>
+    
+  </view>
+
+  <view class='basic' style='background-color:#fffbef'>
+    <view class='basicInfo'>
+      <view class='section__title'>叶绿素a含量</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC3'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>ug/L</view>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C3}}</view>
+      <view class='outTitle' >分项分值：{{score.C3}}</view>
+    </view>
+    
+  </view>
+
+  <view class='basic' style='background-color:#fffbef'>
+    <view class='basicInfo'>
+      <view class='section__title'>治理前氨氮浓度</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='getBeforC4'></input>
+    </view>
+    <view class='basicInfo'>
+      <view class='section__title'>治理后氨氮浓度</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC4'></input>
+    </view>
+    <view class='outInfo' style='margin-left: 10px;'>氨氮改善率为：{{rateC4}}%</view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C4}}</view>
+      <view class='outTitle' >分项分值：{{score.C4}}</view>
+    </view> 
+  </view>
+
+  <view class='basic' style='background-color:#fffbef'>
+    <view class='basicInfo'>
+      <view class='section__title'>治理前总磷浓度</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='getBeforC5'></input>
+    </view>
+    <view class='basicInfo'>
+      <view class='section__title'>治理后总磷浓度</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC5'></input>
+    </view>
+    <view class='outInfo' style='margin-left: 10px;'>总磷改善率为：{{rateC5}}%</view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C5}}</view>
+      <view class='outTitle' >分项分值：{{score.C5}}</view>
+    </view> 
+  </view>
+
+  <view class='basic' style='background-color:#fffbef'>
+    <view class='basicInfo'>
+      <view class='section__title'>治理前透明度</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='getBeforC6'></input>
+    </view>
+    <view class='basicInfo'>
+      <view class='section__title'>治理后透明度</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC6'></input>
+    </view>
+    <view class='outInfo' style='margin-left: 10px;'>透明度改善率为：{{rateC6}}%</view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C6}}</view>
+      <view class='outTitle' >分项分值：{{score.C6}}</view>
+    </view> 
+  </view>
+
+  <view class='basic' style='background-color:#fffbef'>
+    <view class='outInfo'>
+      <button bindtap='getB1'style='font-size:12px;background-color:#e2d6be'>水质指标打分</button>
+      <view class='outTitle' style='margin-top:7px'>水质指标分值：{{score.B1}}</view>
+    </view> 
+  </view>
+
+  <view class='title'>生态健康分项指标</view>
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>浮游植物完整性指数</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC7'></input>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{result.C7}}</view>
+      <view class='outTitle'>分项分值：{{score.C7}}</view>
+    </view>
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>底栖动物完整性指数</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC8'></input>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{result.C8}}</view>
+      <view class='outTitle'>分项分值：{{score.C8}}</view>
+    </view>
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>鱼类多样性指数</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC9'></input>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{result.C9}}</view>
+      <view class='outTitle'>分项分值：{{score.C9}}</view>
+    </view>
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>是否出现清水指示种</view>
+      <radio-group class='info' bindchange='judgeC10'>
+        <radio value='60'/>否
+        <radio value='100'/>是
+      </radio-group>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{result.C10}}</view>
+      <view class='outTitle'>分项分值：{{score.C10}}</view>
+    </view>
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>生态护岸长度</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC11'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m</view>
+    </view>
+    <view class='outInfo' style='margin-left: 10px;'>生态护岸比率为：{{rateC11}}%</view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C11}}</view>
+      <view class='outTitle' >分项分值：{{score.C11}}</view>
+    </view> 
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>挺水、浮叶植物面积</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC12'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m2</view>
+    </view>
+    <view class='outInfo' style='margin-left: 10px;'>挺水、浮叶植物比率为：{{rateC12}}%</view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C12}}</view>
+      <view class='outTitle' >分项分值：{{score.C12}}</view>
+    </view> 
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>沉水植物面积</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC13'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m2</view>
+    </view>
+    <view class='outInfo' style='margin-left: 10px;'>沉水植物比率为：{{rateC13}}%</view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C13}}</view>
+      <view class='outTitle' >分项分值：{{score.C13}}</view>
+    </view> 
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>土著水生植物种类增量</view>
+      <input class='info' style='margin-left: 50%;' type='number' placeholder='输入数值' bindinput='judgeC14'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>种</view>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C14}}</view>
+      <view class='outTitle' >分项分值：{{score.C14}}</view>
+    </view> 
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='basicInfo'>
+      <view class='section__title'>陆生植被类型</view>
+      <checkbox-group bindchange='getPlantType' class='info'>
+        <checkbox value='乔木'>乔木</checkbox>
+        <checkbox value='灌木'>灌木</checkbox>
+        <checkbox value='草类'>草类</checkbox>
+      </checkbox-group>
+    </view>
+    <view class='basicInfo'>
+      <view class='section__title'>陆生植被种类</view>
+      <input class='info' style='margin-left: 50%;' type='number' placeholder='输入数值' bindinput='getPlantTypeNum'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>种</view>
+    </view>
+    <view class='basicInfo'>
+      <view class='section__title'>陆生植被覆盖率</view>
+      <input class='info' style='margin-left: 50%;' type='number' placeholder='输入数值' bindinput='judgeC15'></input>
+      <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>%</view>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle' >评定等级：{{result.C15}}</view>
+      <view class='outTitle' >分项分值：{{score.C15}}</view>
+    </view> 
+  </view>
+
+  <view class='basic' style='background-color:#fff4ef'>
+    <view class='outInfo'>
+      <button bindtap='getB2'style='font-size:12px;background-color:#e2d6be'>生态指标打分</button>
+      <view class='outTitle' style='margin-top:7px'>生态指标分值：{{score.B2}}</view>
+    </view> 
+  </view>
+
+  <view class='title'>生态景观适宜</view>
+  <view class='basic' style='background-color:#fffcfb'>
+    <view class='basicInfo'>
+      <view class='section__title'>生态景观公众满意度</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC16'></input>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{result.C16}}</view>
+      <view class='outTitle'>分项分值：{{score.C16}}</view>
+    </view>
+  </view>
+
+  <view class='basic' style='background-color:#fffcfb'>
+    <view class='basicInfo'>
+      <view class='section__title'>生态景观环境质量</view>
+      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC17'></input>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{result.C17}}</view>
+      <view class='outTitle'>分项分值：{{score.C17}}</view>
+    </view>
+  </view>
+
+  <view class='basic' style='background-color:#fffcfb'>
+    <view class='outInfo'>
+      <button bindtap='getB3'style='font-size:12px;background-color:#e2d6be'>生态景观打分</button>
+      <view class='outTitle' style='margin-top:7px'>生态景观分值：{{score.B3}}</view>
+    </view> 
+  </view>
+
+  <view class='title'>其他</view>
+  <view class='basic' style='background-color:#fffcfb'>
+    <view class='basicInfo'>
+      <view class='section__title'>是否符合防洪排涝规划要求</view>
+      <radio-group class='info' style='margin-left: 60%;' bindchange='judgeC18'>
+        <radio value='60'/>否
+        <radio value='100'/>是
+      </radio-group>
+    </view>
+    <view class='outInfo'>
+      <view class='outTitle'>评定等级：{{qita}}</view>
+    </view>
+  </view>
+  <view class='title'>评定总分</view>
+  <view class='basic' style='background-color:#fffcfb'>
+    <view class='outInfo'>
+      <button bindtap='getTotal'style='font-size:12px;background-color:#e2d6be'>评定总分</button>
+      <view class='outTitle' style='margin-top:7px'>河道总分值：{{total}}</view>
+    </view> 
+  </view>
+
+</view>

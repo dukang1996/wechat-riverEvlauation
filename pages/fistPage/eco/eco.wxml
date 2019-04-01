@@ -1,0 +1,128 @@
+<!--pages/fistPage/eco/eco.wxml-->
+<view class='content'>
+  <view class='title'>生态指标调查指南</view>
+  <view class='div'>
+    <view class='hr'>ITEM1: 浮游植物植物多样性指数</view>
+    <view style='font-size:13px;margin-top:5px'>一、浮游植物样品采集及处理</view>
+    <view class='p'>
+      <text decode='ture'>浮游植物定性样品用孔径约 0.064 mm 的 25#浮游生物网在在水面下约 0.5 m 处以适当的速度作“∞”字形来回拖动 1～3 min，获得的浓缩样分为两份，后将浮游植物收集到样品瓶中，一份立即用适量的鲁哥氏液和 4%福尔马林溶液固定带回实验室进行显微观察，另一份活体样品于 24 小时内镜检。
+    定量采样根据采样点水深的不同设置采样层次，加入 10~15 mL 的鲁哥氏液固定，沉淀48h，浓缩定容至 50 mL，计数用 0.1 mL 浮游藻类计数框在光学显微镜下 10×40 倍镜观察，每瓶样品观察 50 个视野，每瓶样品计数两片取其平均数。计数前将浓缩液摇匀，立即取 0.1 mL混匀的样品加入到浮游藻类计数框内，计数 2 片，其误差要小于 15%，种类鉴定参考《中国淡水藻类》和《九段沙湿地藻类图集》等,对于无法确定到种的种类,则至少鉴定到属。 最后换算为 1L 样品中的总细胞数。公式为：
+N=[(A×Vs)/(Ac×Va)]×n
+式中：N—每升水中浮游植物数量（个/L）；
+29
+A—计数框面积（mm2）；
+Ac—视野面积（mm2）；
+Vs—1 升水样沉淀浓缩后的体积（mL）；
+Va—计数框体积（mL）；
+n—计数所得浮游植物的数目。
+      </text>
+    </view>
+
+    <view style='font-size:13px;margin-top:5px'>二、浮游植物多样性指数及优势种的计算</view>
+    <view class='p'>
+      <text>采用以下 4 种方法进行计算：</text>
+      <view>
+        <view>Shannon指数(H’) : </view>
+        <image src='../png/H.png' style='width:100px;height:30px'></image>
+      </view>
+      <view>
+        <view>Marglef指数（R）：  </view>
+        <image src='../png/R.png' style='width:80px;height:30px'></image>
+      </view>
+      <view>
+        <view>Pielou指数（J）:  </view>
+        <image src='../png/J.png' style='width:80px;height:40px'></image>
+      </view>
+      <view>
+        <view>优势度(Y)：  </view>
+        <image src='../png/Y.png' style='width:80px;height:30px'></image>
+      </view>
+      <view>式中：N 为采样样品中所有藻类的总细胞数；S 为采集样品中藻类种类总数；Pi 为第i种藻类的细胞数与样品中所有藻类总细胞数的比值；ni为第 i 种藻类的细胞数，fi为第 i 种藻类在各站位出现的频率。本研究中将优势度 Y>0.02 的浮游植物定为优势种。</view>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM2: 底栖动物多样性指数</view>
+    <view style='font-size:13px;margin-top:5px'>一、底栖动物样品采集及处理</view>
+    <view class='p'>
+      <text decode='ture'>底栖动物的采集利用 1/16 m2的彼得森采泥器采集。打开彼得森采泥器，将拉钩挂好后慢慢放入水底，然后左右摇摆继续放绳，直到将拉钩抖脱，再轻轻向上提绳拉紧，直到采泥器两页闭合后，将其拉出水面，然后置于桶或盆内，将采泥器两页打开，使所采得的底泥倒入桶内或盆内，每个样点采集 2 次。将底泥倒入孔径为 8 mm2规格的筛绢网兜内，抓紧网兜的口，将网兜放入水中左右来回摇晃，尽可能的将样品中的污泥洗去，若有较大的石块或其它硬材质的东西可以当场拣出。若样品量大可分几次洗涤，直到污泥洗去为止。最后将网中所剩底栖动物和渣滓倒入 1L 聚乙烯塑料瓶中，并贴上标签带回实验室分拣。将全部肉眼看得到的动物用镊子挑出，放入 75%的酒精中固定，之后进行分类计数和称重。
+室内鉴定时，种类尽量鉴定到最小一级，节肢动物门的摇蚊幼虫鉴定到了种，软体动物和寡毛类也鉴定至属，水生昆虫和甲壳动物鉴定至科、属、种，只有少部分类群例如蛭类、涡虫和水螨类只鉴定至纲。一般情况下底栖动物鉴定通常都是到种的，只有少数难以区分和鉴定的种类鉴定到种以上级别，然后数出两次采样各种类的数量并称重，通过采泥器的面积计算出各种类的密度和生物量。</text>
+    </view>
+
+    <view style='font-size:13px;margin-top:5px'>二、底栖动物 BI（Biotic Index）指数的计算</view>
+    <view class='p'>
+      <view>
+        <view>底栖动物 BI 指数是目前美国环境保护署 EPA 重点推荐使用的水质生物评价指数之一。计算公式为： </view>
+        <image src='../png/BI.png' style='width:170px;height:26px'></image>
+      </view>
+      <text>其中 TVi是第 i 个分类单元的耐污值，Ni 为第 i 个分类单元个体数，N 为总个体数。
+此外，所采集到的底栖动物样本的耐污值主要参考王建国、王备新、Bode et al 和段学花的资料。功能摄食类群的划分主要参考 Morse, et al, 刘健康以及 Merritt 和 Cummins。</text>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM3: 鱼类多样性</view>
+    <view class='p'>
+      <text>每年夏季 7-9 月，采用拖网、丝网刺网、定制网等多种捕鱼方式对评价河道内现有鱼类资源及生物量进行调查。对采集到的鱼类尤其是不易采集的种类及时进行录像、拍照，采集到的标本在鉴定到种后及时固定。固定时首先将鱼体用清水洗干净，浸泡到含 10%福尔马林的溶液中保存。
+渔获物分析：物种鉴定和统计后，确定物种组成、数量、重量、密度等；鱼类鉴定主要参考《中国鲤科鱼类志》、《中国淡水鱼类检索》、《江苏鱼类志》等经典著作。
+鱼类多样性评估 G-F 指数法： </text>
+      <view>
+        <view>F 指数 DF(科的多样性)计算： </view>
+        <image src='../png/DF.png' style='width:200px;height:30px'></image>
+      </view>
+      <text>其中：Pi=Ski/Sk为名录中 K 科 i 属中的物种数；Sk 为名录中 k 科中的物种数；n 为 k科中的属数；m 为名录中鱼类的科数。</text>
+      <view>
+        <view>G 指数 DG（属的多样性）计算： </view>
+        <image src='../png/DG.png' style='width:200px;height:30px'></image>
+      </view>
+      <text>其中：qi=Sj/S ,Sj为 j 属中的物种数，S 为名录中鱼类的物种数；p 为名录中鱼类的属数。</text>
+      <view>
+        <view>多样性 G-F 指数计算： </view>
+        <image src='../png/GF.png' style='width:130px;height:30px'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM4: 良好生境指示种</view>
+    <view class='p'>
+      <text>分析评价不同河道的生物组成，找出上海地区河道内清水指示种。</text>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM5:护岸生态性</view>
+    <view class='p'>
+      <text>全年均可进行，采用卷尺测量河段内各种生态型护岸的长度，实验室计算生态型护岸所占评价河段的比例。</text>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM6:挺水、浮叶植物覆盖率</view>
+    <view class='p'>
+      <text>每年 7-9 月植物繁茂时，采用卷尺测量河段长度、河滨带宽度（水深 0.5-0m）及挺水、浮叶植物长度、宽度，回到实验室计算其比值。</text>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM7:沉水植物覆盖率</view>
+    <view class='p'>
+      <text>在每年 7-9 月植被生长旺盛时，采用卷尺测量河段内沉水植物长、宽，回到实验室计算面积及比值。</text>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM8:水生植物多样性</view>
+    <view class='p'>
+      <text>于夏季 7-9 月，调查河段内水生植物群落，记录水生植物的种名，实验室内分析水生植物生活型及种类数。</text>
+    </view>
+  </view>
+
+  <view class='div'>
+    <view class='hr'>ITEM9:陆生植物修复系数</view>
+    <view class='p'>
+      <text>在夏季 7-9 月间，调查评价河段河岸（滨）带乔、灌、草三个空间植被层次、种类数量以及覆盖率。</text>
+    </view>
+  </view>
+
+</view>
