@@ -1,4 +1,3 @@
-<!--pages/newEvaluation/newEvaluation.wxml-->
 <view class='content'>
   <view class='basic' style='background-color:#f0f8ff'>
     <view class='title'>河道基本信息</view>
@@ -9,19 +8,19 @@
 
     <view class="basicInfo">
       <view class="section__title">河道长度：</view>
-      <input type='number' placeholder='输入河道长度' class='info' bindinput='getRiverLength'></input>
+      <input type='digit' placeholder='输入河道长度' class='info' bindinput='getRiverLength'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m</view>
     </view>
 
     <view class="basicInfo">
       <view class="section__title">河道面积：</view>
-      <input type='number' placeholder='输入河道面积' class='info' bindinput='getRiverS'></input>
+      <input type='digit' placeholder='输入河道面积' class='info' bindinput='getRiverS'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m2</view>
     </view>
 
     <view class="basicInfo">
       <view class="section__title">河滨带面积：</view>
-      <input type='number' placeholder='输入河滨带面积' class='info' bindinput='getRiverL'></input>
+      <input type='digit' placeholder='输入河滨带面积' class='info' bindinput='getRiverL'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m2</view>
     </view>
 
@@ -37,7 +36,7 @@
   <view class='basic' style='background-color:#fffbef'>
     <view class='basicInfo'>
       <view class='section__title'>溶解氧含量</view>
-      <input class='info' type='number' placeholder='输入溶解氧含量' bindinput='judgeDO'></input>
+      <input class='info' type='digit' placeholder='输入溶解氧含量' bindinput='judgeDO'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>mg/L</view>
     </view>
     <view class='outInfo'>
@@ -49,7 +48,7 @@
   <view class='basic' style='background-color:#fffbef'>
     <view class='basicInfo'>
       <view class='section__title'>高锰酸盐指数</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC2'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC2'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>mg/L</view>
     </view>
     <view class='outInfo'>
@@ -62,7 +61,7 @@
   <view class='basic' style='background-color:#fffbef'>
     <view class='basicInfo'>
       <view class='section__title'>叶绿素a含量</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC3'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC3'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>ug/L</view>
     </view>
     <view class='outInfo'>
@@ -75,11 +74,11 @@
   <view class='basic' style='background-color:#fffbef'>
     <view class='basicInfo'>
       <view class='section__title'>治理前氨氮浓度</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='getBeforC4'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getBeforC4'></input>
     </view>
     <view class='basicInfo'>
       <view class='section__title'>治理后氨氮浓度</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC4'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC4'></input>
     </view>
     <view class='outInfo' style='margin-left: 10px;'>氨氮改善率为：{{rateC4}}%</view>
     <view class='outInfo'>
@@ -91,11 +90,11 @@
   <view class='basic' style='background-color:#fffbef'>
     <view class='basicInfo'>
       <view class='section__title'>治理前总磷浓度</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='getBeforC5'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getBeforC5'></input>
     </view>
     <view class='basicInfo'>
       <view class='section__title'>治理后总磷浓度</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC5'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC5'></input>
     </view>
     <view class='outInfo' style='margin-left: 10px;'>总磷改善率为：{{rateC5}}%</view>
     <view class='outInfo'>
@@ -107,11 +106,11 @@
   <view class='basic' style='background-color:#fffbef'>
     <view class='basicInfo'>
       <view class='section__title'>治理前透明度</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='getBeforC6'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getBeforC6'></input>
     </view>
     <view class='basicInfo'>
       <view class='section__title'>治理后透明度</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC6'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC6'></input>
     </view>
     <view class='outInfo' style='margin-left: 10px;'>透明度改善率为：{{rateC6}}%</view>
     <view class='outInfo'>
@@ -131,7 +130,7 @@
   <view class='basic' style='background-color:#fff4ef'>
     <view class='basicInfo'>
       <view class='section__title'>浮游植物完整性指数</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC7'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='judgeC7'></input>
     </view>
     <view class='outInfo'>
       <view class='outTitle'>评定等级：{{result.C7}}</view>
@@ -142,7 +141,7 @@
   <view class='basic' style='background-color:#fff4ef'>
     <view class='basicInfo'>
       <view class='section__title'>底栖动物完整性指数</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC8'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC8'></input>
     </view>
     <view class='outInfo'>
       <view class='outTitle'>评定等级：{{result.C8}}</view>
@@ -153,7 +152,7 @@
   <view class='basic' style='background-color:#fff4ef'>
     <view class='basicInfo'>
       <view class='section__title'>鱼类多样性指数</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC9'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC9'></input>
     </view>
     <view class='outInfo'>
       <view class='outTitle'>评定等级：{{result.C9}}</view>
@@ -178,7 +177,7 @@
   <view class='basic' style='background-color:#fff4ef'>
     <view class='basicInfo'>
       <view class='section__title'>生态护岸长度</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC11'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC11'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m</view>
     </view>
     <view class='outInfo' style='margin-left: 10px;'>生态护岸比率为：{{rateC11}}%</view>
@@ -191,7 +190,7 @@
   <view class='basic' style='background-color:#fff4ef'>
     <view class='basicInfo'>
       <view class='section__title'>挺水、浮叶植物面积</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC12'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC12'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m2</view>
     </view>
     <view class='outInfo' style='margin-left: 10px;'>挺水、浮叶植物比率为：{{rateC12}}%</view>
@@ -204,7 +203,7 @@
   <view class='basic' style='background-color:#fff4ef'>
     <view class='basicInfo'>
       <view class='section__title'>沉水植物面积</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC13'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='getC13'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>m2</view>
     </view>
     <view class='outInfo' style='margin-left: 10px;'>沉水植物比率为：{{rateC13}}%</view>
@@ -217,7 +216,7 @@
   <view class='basic' style='background-color:#fff4ef'>
     <view class='basicInfo'>
       <view class='section__title'>土著水生植物种类增量</view>
-      <input class='info' style='margin-left: 50%;' type='number' placeholder='输入数值' bindinput='judgeC14'></input>
+      <input class='info' style='margin-left: 50%;' type='number' placeholder='输入数值' bindinput='getC14'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>种</view>
     </view>
     <view class='outInfo'>
@@ -237,12 +236,12 @@
     </view>
     <view class='basicInfo'>
       <view class='section__title'>陆生植被种类</view>
-      <input class='info' style='margin-left: 50%;' type='number' placeholder='输入数值' bindinput='getPlantTypeNum'></input>
+      <input class='info' style='margin-left: 50%;' type='number' placeholder='输入数值' bindblur='getPlantTypeNum'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>种</view>
     </view>
     <view class='basicInfo'>
       <view class='section__title'>陆生植被覆盖率</view>
-      <input class='info' style='margin-left: 50%;' type='number' placeholder='输入数值' bindinput='judgeC15'></input>
+      <input class='info' style='margin-left: 50%;' type='digit' placeholder='输入数值' bindblur='getC15'></input>
       <view style='position: absolute;margin-left:75%;margin-top:5rpx;font-size:12px'>%</view>
     </view>
     <view class='outInfo'>
@@ -262,7 +261,7 @@
   <view class='basic' style='background-color:#fffcfb'>
     <view class='basicInfo'>
       <view class='section__title'>生态景观公众满意度</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC16'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='judgeC16'></input>
     </view>
     <view class='outInfo'>
       <view class='outTitle'>评定等级：{{result.C16}}</view>
@@ -273,7 +272,7 @@
   <view class='basic' style='background-color:#fffcfb'>
     <view class='basicInfo'>
       <view class='section__title'>生态景观环境质量</view>
-      <input class='info' type='number' placeholder='输入数值' bindinput='judgeC17'></input>
+      <input class='info' type='digit' placeholder='输入数值' bindinput='judgeC17'></input>
     </view>
     <view class='outInfo'>
       <view class='outTitle'>评定等级：{{result.C17}}</view>

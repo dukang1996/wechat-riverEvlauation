@@ -44,3 +44,32 @@
 
 </view>
 
+<view class='content'>
+
+  <view class='head'>
+      指标计算小工具
+  </view>
+
+  <view class='nav'>
+    <view class='nav-item'>
+      <navigator url='P-BIB/P-BIB' open-type='navigate'>
+        <image src='png/P-BIB.png' style='width:30px;height:30px'></image>
+        <view>P-BIB指数</view>
+      </navigator>
+    </view>
+    <view class='nav-item'>
+      <navigator url='B-BIB/B-BIB' open-type='navigate'>
+        <image src='png/B-BIB.png' style='width:30px;height:30px'></image>
+        <view>B-BIB指数</view>
+      </navigator>
+    </view>
+    <view class='nav-item'>
+      <navigator url='G-F/G-F' open-type='navigate'>
+        <image src='png/G-F.png' style='width:30px;height:30px'></image>
+        <view>G-F值</view>
+      </navigator>
+    </view>
+  </view>
+
+</view>
+

@@ -2,10 +2,12 @@
   "pages":[
     "pages/fistPage/fistPage",
     "pages/newEvaluation/newEvaluation",
-    "pages/fistPage/C1/C1",
     "pages/fistPage/ready/ready",
     "pages/fistPage/water/water",
     "pages/fistPage/eco/eco",
+    "pages/fistPage/P-BIB/P-BIB",
+    "pages/fistPage/B-BIB/B-BIB",
+    "pages/fistPage/G-F/G-F",
     "pages/fistPage/water/littleTool/littleTool"
   ],
   "window":{
